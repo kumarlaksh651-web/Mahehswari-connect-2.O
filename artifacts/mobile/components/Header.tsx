@@ -6,11 +6,10 @@ import { useAuth } from "@/context/AuthContext";
 import { useColors } from "@/hooks/useColors";
 
 interface HeaderProps {
-  onMenuPress?: () => void;
   subtitle?: string;
 }
 
-export function Header({ onMenuPress, subtitle }: HeaderProps) {
+export function Header({ subtitle }: HeaderProps) {
   const router = useRouter();
   const colors = useColors();
   const insets = useSafeAreaInsets();
@@ -38,14 +37,14 @@ export function Header({ onMenuPress, subtitle }: HeaderProps) {
       <View style={styles.row}>
         <TouchableOpacity
           style={styles.iconButton}
-          onPress={onMenuPress}
+          onPress={() => router.push("/settings")}
           activeOpacity={0.7}
         >
           <Feather name="menu" size={24} color={colors.primaryForeground} />
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.searchBar]}
+          style={styles.searchBar}
           onPress={() => router.push("/search")}
           activeOpacity={0.8}
         >

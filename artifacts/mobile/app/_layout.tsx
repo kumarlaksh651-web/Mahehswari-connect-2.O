@@ -29,7 +29,9 @@ function RootLayoutNav() {
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="profile" options={{ headerShown: false }} />
       <Stack.Screen name="search" options={{ headerShown: false }} />
+      <Stack.Screen name="settings" options={{ headerShown: false }} />
       <Stack.Screen name="member/[id]" options={{ headerShown: false }} />
+      <Stack.Screen name="donate/[id]" options={{ headerShown: false }} />
     </Stack>
   );
 }
