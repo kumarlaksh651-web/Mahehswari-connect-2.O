@@ -54,7 +54,7 @@ export default function RegisterScreen() {
     const result = await register(email.trim(), password, phone.trim(), country.code);
     setLoading(false);
     if (result.success) {
-      router.push("/(auth)/verify");
+      router.replace("/(tabs)");
     } else {
       Alert.alert("Registration Failed", result.error ?? "Something went wrong");
     }
